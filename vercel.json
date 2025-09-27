@@ -22,6 +22,10 @@
     {
       "source": "/champions",
       "destination": "/champions.html"
+    },
+    {
+      "source": "/resources/(.*)",
+      "destination": "/resources/$1"
     }
   ],
   "headers": [
@@ -31,6 +35,23 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.(jpg|jpeg|png|gif|svg|ico|webp))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     }
