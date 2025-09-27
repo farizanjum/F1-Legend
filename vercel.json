@@ -4,12 +4,30 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "circuits.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "champions.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "/circuits",
+      "dest": "/circuits.html"
+    },
+    {
+      "src": "/champions",
+      "dest": "/champions.html"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|webp))",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     }
   ],
   "headers": [
