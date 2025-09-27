@@ -12,6 +12,17 @@
       "dest": "/$1"
     }
   ],
+  "headers": [
+    {
+      "source": "/resources/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install'",
   "buildCommand": "echo 'No build step required'"
