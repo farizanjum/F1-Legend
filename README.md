@@ -2,34 +2,34 @@
 
 A modern, interactive Formula 1 racing website built with HTML, CSS, and JavaScript featuring real-time data integration and stunning visual design.
 
-## 🚀 Features
+## Features
 
-### 🏁 Live Racing Dashboard
+### Live Racing Dashboard
 - **Real-time F1 data** integration with OpenF1 API
 - **2025 Season Preview** with complete race calendar
 - **Live driver standings** and championship information
 - **Interactive race progress** tracking
 - **Pre-season information** and countdown to next race
 
-### 🏆 Driver & Team Information
+### Driver & Team Information
 - **Complete 2025 driver lineup** with all 20 drivers
 - **Accurate team assignments** including major moves (Hamilton to Ferrari, Sainz to Williams)
 - **Driver statistics** and career information
 - **Interactive driver cards** with detailed profiles
 
-### 🗺️ Circuit Explorer
+### Circuit Explorer
 - **Interactive world map** with all F1 circuits
 - **Circuit-specific information** including lap records and history
 - **Detailed circuit layouts** and specifications
 - **Filterable circuit categories** by region and type
 
-### 📊 Data & Analytics
+### Data & Analytics
 - **Historical race data** from previous seasons
 - **Real-time telemetry display** with mouse interaction
 - **Comprehensive statistics** and race analysis
 - **Performance metrics** and driver comparisons
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic markup and modern web standards
 - **CSS3** - Advanced styling with Tailwind CSS framework
@@ -38,7 +38,7 @@ A modern, interactive Formula 1 racing website built with HTML, CSS, and JavaScr
 - **Responsive Design** - Mobile-first approach
 - **Web Animations** - Smooth transitions and effects
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 F1-Legend/
@@ -62,7 +62,7 @@ F1-Legend/
     └── Spa-Francorchamps-circuit.jpg
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Option 1: Local Development Server
 ```bash
@@ -84,7 +84,7 @@ http://localhost:8080
 ### Option 3: Direct File Access
 Simply open `index.html` in your web browser (some features may be limited due to CORS restrictions).
 
-## 🎯 Key Features in Detail
+## Key Features in Detail
 
 ### Live Racing Section
 - **2025 Season Preview**: Complete race calendar with all 24 circuits
@@ -104,7 +104,7 @@ Simply open `index.html` in your web browser (some features may be limited due t
 - **Career Statistics**: Wins, podiums, and championship history
 - **Visual Design**: Professional cards with team colors
 
-## 🌟 2025 Season Highlights
+## 2025 Season Highlights
 
 ### New Circuits & Features
 - **Madrid Street Circuit** - New addition to the calendar
@@ -124,7 +124,7 @@ Simply open `index.html` in your web browser (some features may be limited due t
 - **Digital Integration** - Enhanced fan engagement features
 - **Broadcast Technology** - Improved viewing experience
 
-## 🔧 Development
+## Development
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
@@ -148,7 +148,7 @@ The website uses CSS custom properties and modular JavaScript, making it easy to
 3. Add corresponding styles in the CSS sections
 4. Test functionality across different browsers
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive and works on:
 - **Desktop** (1920x1080 and above)
@@ -156,7 +156,7 @@ The website is fully responsive and works on:
 - **Tablet** (768x1024, 1024x768)
 - **Mobile** (375x667, 414x896)
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 ### Visual Design
 - **Dark Theme**: Modern dark aesthetic with red accents
@@ -170,7 +170,7 @@ The website is fully responsive and works on:
 - **Accessibility**: ARIA labels and keyboard navigation
 - **Performance**: Optimized for fast load times
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -180,18 +180,17 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Update documentation as needed
 4. Ensure responsive design works properly
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- **Formula 1** - For the incredible sport and data
 - **OpenF1 API** - For providing real-time racing data
 - **Tailwind CSS** - For the utility-first CSS framework
 - **GitHub** - For hosting and collaboration tools
 
-## 📞 Contact
+##  Contact
 
 For questions, suggestions, or collaboration opportunities, please reach out through GitHub Issues or Discussions.
 
