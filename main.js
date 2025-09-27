@@ -8,29 +8,40 @@ let currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    initializeCommonFeatures();
-    
-    // Page-specific initialization
-    if (currentPage === 'index.html' || currentPage === '') {
-        initializeHomePage();
-        initializeLiveData(); // Initialize F1 live data
-    } else if (currentPage === 'circuits.html') {
-        initializeCircuitsPage();
-    } else if (currentPage === 'champions.html') {
-        initializeChampionsPage();
+    console.log('DOM loaded, current page:', currentPage);
+
+    try {
+        initializeCommonFeatures();
+
+        // Page-specific initialization
+        if (currentPage === 'index.html' || currentPage === '') {
+            console.log('Initializing home page');
+            initializeHomePage();
+            initializeLiveData(); // Initialize F1 live data
+        } else if (currentPage === 'circuits.html') {
+            console.log('Initializing circuits page');
+            initializeCircuitsPage();
+        } else if (currentPage === 'champions.html') {
+            console.log('Initializing champions page');
+            initializeChampionsPage();
+        }
+
+        // Initialize scroll reveal animations
+        initializeScrollReveal();
+
+        // Initialize navigation effects
+        initializeNavigation();
+
+        // Initialize mobile menu
+        initializeMobileMenu();
+
+        // Initialize enhanced animations
+        initializeEnhancedAnimations();
+
+        console.log('All initializations completed');
+    } catch (error) {
+        console.error('Error during initialization:', error);
     }
-    
-    // Initialize scroll reveal animations
-    initializeScrollReveal();
-    
-    // Initialize navigation effects
-    initializeNavigation();
-    
-    // Initialize mobile menu
-    initializeMobileMenu();
-    
-    // Initialize enhanced animations
-    initializeEnhancedAnimations();
 });
 
 // Common features across all pages
@@ -72,23 +83,53 @@ function initializeHomePage() {
 
 // Circuits page specific initialization
 function initializeCircuitsPage() {
-    initializeCircuitMap();
-    initializeCircuitFilters();
-    initializeTrackViewer();
-    
-    // Generate circuit data for interactive elements
-    generateCircuitData();
+    console.log('Starting circuits page initialization');
+
+    try {
+        initializeCircuitMap();
+        console.log('Circuit map initialized');
+
+        initializeCircuitFilters();
+        console.log('Circuit filters initialized');
+
+        initializeTrackViewer();
+        console.log('Track viewer initialized');
+
+        // Generate circuit data for interactive elements
+        generateCircuitData();
+        console.log('Circuit data generated');
+
+        console.log('Circuits page initialization completed');
+    } catch (error) {
+        console.error('Error initializing circuits page:', error);
+    }
 }
 
 // Champions page specific initialization
 function initializeChampionsPage() {
-    initializeChampionSearch();
-    initializeChampionFilters();
-    initializeTimeline();
-    initializeCharts();
-    
-    // Generate champion data for statistics
-    generateChampionData();
+    console.log('Starting champions page initialization');
+
+    try {
+        initializeChampionSearch();
+        console.log('Champion search initialized');
+
+        initializeChampionFilters();
+        console.log('Champion filters initialized');
+
+        initializeTimeline();
+        console.log('Timeline initialized');
+
+        initializeCharts();
+        console.log('Charts initialized');
+
+        // Generate champion data for statistics
+        generateChampionData();
+        console.log('Champion data generated');
+
+        console.log('Champions page initialization completed');
+    } catch (error) {
+        console.error('Error initializing champions page:', error);
+    }
 }
 
 // Enhanced Three.js Hero Section with improved 3D Car
@@ -2417,21 +2458,33 @@ document.head.appendChild(style);
 
 // Initialize interactive circuit map with Leaflet
 function initializeCircuitMap() {
+    console.log('Initializing circuit map...');
+
     const mapContainer = document.getElementById('map');
-    if (!mapContainer || typeof L === 'undefined') {
-        console.error('Map container or Leaflet not found');
+    if (!mapContainer) {
+        console.error('Map container not found');
+        return;
+    }
+
+    if (typeof L === 'undefined') {
+        console.error('Leaflet library not loaded');
+        mapContainer.innerHTML = '<div class="text-center text-gray-400 p-8">Map library not loaded. Please refresh the page.</div>';
         return;
     }
 
     try {
+        console.log('Creating Leaflet map...');
+
         // Initialize Leaflet map centered on Europe
         const map = L.map('map').setView([48.8566, 2.3522], 4); // Paris coordinates
+        console.log('Map object created');
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors',
             maxZoom: 18
         }).addTo(map);
+        console.log('Tile layer added');
 
         // Add circuit markers with sample data
         const circuits = [
@@ -2453,7 +2506,7 @@ function initializeCircuitMap() {
             });
         });
 
-        console.log('Circuit map initialized successfully');
+        console.log('Circuit map initialized successfully with', circuits.length, 'markers');
     } catch (error) {
         console.error('Error initializing circuit map:', error);
         mapContainer.innerHTML = '<div class="text-center text-gray-400 p-8">Map loading failed. Please refresh the page.</div>';
