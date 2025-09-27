@@ -2,6 +2,8 @@
 
 A modern, interactive Formula 1 racing website built with HTML, CSS, and JavaScript featuring real-time data integration and stunning visual design.
 
+<img width="1879" height="1035" alt="Screenshot 2025-09-27 160847" src="https://github.com/user-attachments/assets/4a5011fc-27f5-462b-b7c9-d3e31fa89c60" />
+
 ## Features
 
 ### Live Racing Dashboard
