@@ -18,7 +18,51 @@
       "use": "@vercel/static"
     },
     {
-      "src": "resources/**",
+      "src": "resources/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/champion-hamilton.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/champion-leclerc.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/champion-schumacher.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/champion-verstappen.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/circuit-aerial.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/f1-racing-battle.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/hamilton-action.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/hero-f1-car.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/silverstone-circuit.jpeg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/Spa-Francorchamps-circuit.jpg",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "resources/verstappen-action.jpg",
       "use": "@vercel/static"
     }
   ],
@@ -52,6 +96,33 @@
         {
           "key": "Content-Type",
           "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/resources/(.*\\.jpg)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "source": "/resources/(.*\\.jpeg)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/jpeg"
+        }
+      ]
+    },
+    {
+      "source": "/resources/(.*\\.png)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/png"
         }
       ]
     }
