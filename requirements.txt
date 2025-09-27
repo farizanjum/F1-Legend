@@ -1,0 +1,66 @@
+# Core 3D Graphics and Animation Libraries
+three@latest                    # 3D graphics library for car models, track visualizations
+@types/three@latest             # TypeScript types for Three.js
+animejs@latest                  # Animation library for smooth transitions and micro-interactions
+pixi.js@latest                  # High-performance 2D WebGL renderer for visual effects
+
+# Data Visualization
+echarts@latest                  # Interactive charts and data visualization
+recharts@latest                 # React charts for telemetry data (if using React)
+
+# Physics Simulation
+matter-js@latest                # 2D physics engine for realistic car movement
+
+# Interactive Maps
+leaflet@latest                  # Interactive maps for circuit locations
+@types/leaflet@latest           # TypeScript types for Leaflet
+
+# Additional Animation and Effects
+framer-motion@latest            # Production-ready motion library for React
+aos@latest                      # Animate on scroll library
+
+# Development and Build Tools
+vite@latest                     # Fast build tool for modern web development
+typescript@latest               # TypeScript for type safety
+tailwindcss@latest              # Utility-first CSS framework
+autoprefixer@latest             # CSS autoprefixer
+postcss@latest                  # CSS postprocessor
+
+# Performance and Optimization
+workbox-webpack-plugin@latest   # Service worker for caching and offline functionality
+vite-plugin-pwa@latest          # PWA plugin for Vite
+compression-webpack-plugin@latest # Asset compression
+
+# Development Dependencies
+@types/node@latest              # Node.js types
+eslint@latest                   # JavaScript linting
+prettier@latest                 # Code formatting
+vite-plugin-eslint@latest       # ESLint integration for Vite
+
+# External API Integration
+# OpenF1 API (https://openf1.org/) - Free Formula 1 live data
+# - Historical data: Free, no authentication
+# - Real-time data: Requires paid account
+# - Data includes: car telemetry, drivers, positions, weather, sessions, etc.
+# - Sample rate: ~3.7 Hz for car data
+# - Updates every ~3 seconds during live sessions
+#
+# API Endpoints Used:
+# - /sessions - Get current F1 session information
+# - /drivers - Get driver standings and information
+# - /weather - Get track weather conditions
+# - /position - Get live race positions (during active sessions)
+#
+# Features Implemented:
+# - Live session countdown with real F1 data
+# - Current driver standings with country flags
+# - Real-time weather conditions
+# - Automatic fallback to mock data if API unavailable
+# - Updates every 30 seconds
+#
+# Interactive Features:
+# - Mouse-controlled telemetry display (speed, lap time, G-force)
+# - Real-time mouse tracking with acceleration detection
+# - Smooth animations based on mouse movement patterns
+# - Visual feedback with scaling and glow effects
+# - Interactive F1 statistics with gradient animations
