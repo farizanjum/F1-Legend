@@ -2415,6 +2415,51 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Initialize interactive circuit map with Leaflet
+function initializeCircuitMap() {
+    const mapContainer = document.getElementById('map');
+    if (!mapContainer || typeof L === 'undefined') {
+        console.error('Map container or Leaflet not found');
+        return;
+    }
+
+    try {
+        // Initialize Leaflet map centered on Europe
+        const map = L.map('map').setView([48.8566, 2.3522], 4); // Paris coordinates
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Add circuit markers with sample data
+        const circuits = [
+            { name: 'Monaco', lat: 43.7347, lng: 7.4206, type: 'street' },
+            { name: 'Silverstone', lat: 52.0786, lng: -1.0169, type: 'race' },
+            { name: 'Spa-Francorchamps', lat: 50.4372, lng: 5.9714, type: 'race' },
+            { name: 'Monza', lat: 45.6156, lng: 9.2811, type: 'race' },
+            { name: 'Suzuka', lat: 34.8431, lng: 136.5410, type: 'race' }
+        ];
+
+        circuits.forEach(circuit => {
+            const marker = L.marker([circuit.lat, circuit.lng])
+                .bindPopup(`<b>${circuit.name}</b><br>Type: ${circuit.type}`)
+                .addTo(map);
+
+            marker.on('click', () => {
+                console.log(`Clicked on ${circuit.name}`);
+                // Could trigger circuit details modal here
+            });
+        });
+
+        console.log('Circuit map initialized successfully');
+    } catch (error) {
+        console.error('Error initializing circuit map:', error);
+        mapContainer.innerHTML = '<div class="text-center text-gray-400 p-8">Map loading failed. Please refresh the page.</div>';
+    }
+}
+
 // Export functions for global access
 window.openCircuitDetail = openCircuitDetail;
 window.closeCircuitDetail = closeCircuitDetail;
