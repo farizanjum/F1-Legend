@@ -14,14 +14,14 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/circuits",
-      "dest": "/circuits.html"
+      "source": "/circuits",
+      "destination": "/circuits.html"
     },
     {
-      "src": "/champions",
-      "dest": "/champions.html"
+      "source": "/champions",
+      "destination": "/champions.html"
     }
   ],
   "headers": [
